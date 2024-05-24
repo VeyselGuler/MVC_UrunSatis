@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/urunsatis_HW.props" />
+</Project>

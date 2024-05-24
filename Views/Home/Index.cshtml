@@ -1,0 +1,45 @@
+﻿@model List<UrunModel>
+@{
+    ViewData["css"] = "/css/styles.css";
+}
+
+<form action="/" method="post">
+    <div style="display: flex">
+
+
+        <div class="product-list">
+            @foreach (var item in Model)
+            {
+                <div class="product @(item.Stok <= 0 ? "out-of-stock" : "")">
+                    <img src="@item.Img">
+                    <h2>@item.Ad</h2>
+                    <p>Stok: @item.Stok</p>
+                    <p>Fiyat: @item.Fiyat TL</p>
+                    <label>
+                        <input type="radio" name="ad" value="@item.Ad"> Seç
+                    </label>
+                    <p>
+                        <select name="Adet">
+                            <option value="1" disabled selected>Adet</option>
+                            @for (int i = 1; i <= item.Stok; i++)
+                            {
+                                <option value="@i">@i</option>
+                            }
+                        </select>
+                    </p>
+                </div>
+            }
+        </div>
+
+        <div class="checkout">
+            <h2>Satış Yap</h2>
+            <label><input type="radio" name="odemeSekli" value="nakit" checked="checked"> Nakit</label>
+            <label><input type="radio" name="odemeSekli" value="krediKartı"> Kredi Kartı</label>
+            <input type="text" required name="para" placeholder="Ödemek istediğiniz Tutar">
+            <button>Ödeme Al</button>
+
+            @Html.Raw(ViewData["report"])
+
+        </div>
+    </div>
+</form>

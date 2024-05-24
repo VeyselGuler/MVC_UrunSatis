@@ -1,0 +1,10 @@
+Domates|5|3|assets/img/domats.jpg
+Muz|0|2|assets/img/mz.jpg
+Çilek|10|5|assets/img/cilk.jpg
+Portakal|8|2|assets/img/portakl.jpg
+Üzüm|4|3|assets/img/uzm.jpg
+Karpuz|5|7|assets/img/karpz.jpg
+Elma|20|3|assets/img/elma.jpg
+Armut|15|4|assets/img/armut.jpg
+Kivi|8|5|assets/img/kivi.jpg
+Ananas|14|35|assets/img/ananas.jpg

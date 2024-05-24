@@ -1,0 +1,31 @@
+@model List<LogModel>
+@{
+    ViewData["css"] = "/css/admin.css";
+}
+<div>
+    @Html.Raw(ViewData["ciro"])
+</div>
+<div class="logs-panel">
+    <h1>Admin Log</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Alınan ürün</th>
+            <th>Kazanılan para</th>
+            <th>Adet sayısı</th>
+            <th>Ödeme yöntemi</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price TL Kazanıldı</td>
+                <td>@item.Stok Adet alındı</td>
+                <td>@item.OdemeSekli Ödeme yöntemi kullanıldı</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
